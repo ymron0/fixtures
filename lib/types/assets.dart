@@ -9,8 +9,8 @@ abstract class AssetFixture {
   final AssetCodeFixture code;
   final int decimalPlaces;
   final String symbol;
-  final String? logoUrl;
-  final String? bundledLogoPath;
+  final String? remoteLogoUrl;
+  final String? bundledLogoAsset;
 
   const AssetFixture({
     required this.id,
@@ -18,8 +18,8 @@ abstract class AssetFixture {
     required this.code,
     required this.decimalPlaces,
     required this.symbol,
-    this.logoUrl,
-    this.bundledLogoPath,
+    this.remoteLogoUrl,
+    this.bundledLogoAsset,
   });
 }
 
@@ -30,15 +30,15 @@ class CurrencyFixture extends AssetFixture {
     required AssetCodeFixture code,
     required int decimalPlaces,
     required String symbol,
-    String? logoUrl,
-    String? bundledLogoPath,
+    String? remoteLogoUrl,
+    String? bundledLogoAsset,
   }) : super(
          id: id,
          name: name,
          code: code,
          decimalPlaces: decimalPlaces,
          symbol: symbol,
-         logoUrl: logoUrl,
-         bundledLogoPath: bundledLogoPath,
+         remoteLogoUrl: remoteLogoUrl,
+         bundledLogoAsset: bundledLogoAsset,
        );
 }

@@ -7,8 +7,8 @@ const List<AssetFixture> assetsFixtures = [
     code: AssetCodeFixture('EUR'),
     decimalPlaces: 2,
     symbol: '€',
-    logoUrl: 'PLACEHOLDER_URL',
-    bundledLogoPath: 'PLACEHOLDER_PATH',
+    remoteLogoUrl: 'PLACEHOLDER_URL',
+    bundledLogoAsset: 'PLACEHOLDER_PATH',
   ),
   CurrencyFixture(
     id: 'asset-chf',
@@ -16,8 +16,8 @@ const List<AssetFixture> assetsFixtures = [
     code: AssetCodeFixture('CHF'),
     decimalPlaces: 2,
     symbol: 'Fr',
-    logoUrl: 'PLACEHOLDER_URL',
-    bundledLogoPath: 'PLACEHOLDER_PATH',
+    remoteLogoUrl: 'PLACEHOLDER_URL',
+    bundledLogoAsset: 'PLACEHOLDER_PATH',
   ),
   CurrencyFixture(
     id: 'asset-usd',
@@ -25,7 +25,7 @@ const List<AssetFixture> assetsFixtures = [
     code: AssetCodeFixture('USD'),
     decimalPlaces: 2,
     symbol: r'$',
-    logoUrl: null,
-    bundledLogoPath: null,
+    remoteLogoUrl: null,
+    bundledLogoAsset: null,
   ),
 ];
