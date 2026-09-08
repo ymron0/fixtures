@@ -1,94 +1,44 @@
 [
   {
-    "kind": "fiatCurrency",
-    "id": "asset-chf",
-    "code": "CHF",
-    "name": "Swiss Franc",
-    "symbol": null,
-    "assetLogoPath": "/assets/countries/chf.png",
-    "decimalPlaces": 2
-  },
-  {
-    "kind": "fiatCurrency",
-    "id": "asset-eur",
-    "code": "EUR",
-    "name": "Euro",
+    "_type": "currency",
+    "id": {
+      "value": "asset-eur"
+    },
+    "displayName": "Euro",
+    "code": {
+      "value": "EUR"
+    },
     "symbol": "€",
-    "assetLogoPath": "/assets/countries/eur.png",
+    "logoUrl": "PLACEHOLDER_URL",
+    "bundledLogoPath": "PLACEHOLDER_PATH",
     "decimalPlaces": 2
   },
   {
-    "kind": "fiatCurrency",
-    "id": "asset-usd",
-    "code": "USD",
-    "name": "US Dollar",
+    "_type": "currency",
+    "id": {
+      "value": "asset-CHF"
+    },
+    "displayName": "Swiss Franc",
+    "code": {
+      "value": "CHF"
+    },
+    "symbol": "Fr",
+    "logoUrl": "PLACEHOLDER_URL",
+    "bundledLogoPath": "PLACEHOLDER_PATH",
+    "decimalPlaces": 2
+  },
+  {
+    "_type": "currency",
+    "id": {
+      "value": "asset-usd"
+    },
+    "displayName": "US Dollar",
+    "code": {
+      "value": "USD"
+    },
     "symbol": "$",
-    "logoUrl": "https://vectorflags.s3.amazonaws.com/flags/us-square-01.png",
-    "decimalPlaces": 2
-  },
-  {
-    "kind": "blockchain",
-    "id": "asset-btc",
-    "code": "BTC",
-    "name": "Bitcoin",
-    "symbol": "₿",
-    "assetLogoPath": "/assets/logos/btc.png",
-    "decimalPlaces": 8
-  },
-  {
-    "kind": "blockchain",
-    "id": "asset-eth",
-    "code": "ETH",
-    "name": "Ethereum",
-    "symbol": "Ξ",
-    "decimalPlaces": 18
-  },
-  {
-    "kind": "metal",
-    "id": "asset-xau",
-    "code": "XAU",
-    "name": "Gold",
-    "symbol": null,
-    "decimalPlaces": 3
-  },
-  {
-    "kind": "stock",
-    "id": "asset-nvda",
-    "code": "NVDA",
-    "name": "NVIDIA Corporation",
-    "symbol": null,
-    "decimalPlaces": 2
-  },
-  {
-    "kind": "blockchain",
-    "id": "asset-nvdax",
-    "code": "NVDAx",
-    "name": "NVIDIA Corporation",
-    "symbol": null,
-    "decimalPlaces": 8
-  },
-  {
-    "kind": "stock",
-    "id": "asset-goog",
-    "code": "GOOG",
-    "name": "Alphabet Inc.",
-    "symbol": null,
-    "decimalPlaces": 2
-  },
-  {
-    "kind": "stock",
-    "id": "asset-amzn",
-    "code": "AMZN",
-    "name": "Amazon.com, Inc.",
-    "symbol": null,
-    "decimalPlaces": 2
-  },
-  {
-    "kind": "fund",
-    "id": "asset-vt",
-    "code": "VT",
-    "name": "Vanguard Total World Stock ETF",
-    "symbol": null,
+    "logoUrl": "PLACEHOLDER_URL",
+    "bundledLogoPath": "PLACEHOLDER_PATH",
     "decimalPlaces": 2
   }
 ]
