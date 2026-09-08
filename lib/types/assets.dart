@@ -1,15 +1,10 @@
-class AssetIdFixture {
-  final String value;
-  const AssetIdFixture(this.value);
-}
-
 class AssetCodeFixture {
   final String value;
   const AssetCodeFixture(this.value);
 }
 
 abstract class AssetFixture {
-  final AssetIdFixture id;
+  final String id;
   final String displayName;
   final AssetCodeFixture code;
   final int decimalPlaces;
@@ -30,7 +25,7 @@ abstract class AssetFixture {
 
 class CurrencyFixture extends AssetFixture {
   const CurrencyFixture({
-    required AssetIdFixture id,
+    required String id,
     required String displayName,
     required AssetCodeFixture code,
     required int decimalPlaces,

@@ -2,7 +2,7 @@ import 'package:fixtures/types/assets.dart';
 
 const List<AssetFixture> assetsFixtures = [
   CurrencyFixture(
-    id: AssetIdFixture('asset-eur'),
+    id: 'asset-eur',
     displayName: 'Euro',
     code: AssetCodeFixture('EUR'),
     decimalPlaces: 2,
@@ -11,7 +11,7 @@ const List<AssetFixture> assetsFixtures = [
     bundledLogoPath: 'PLACEHOLDER_PATH',
   ),
   CurrencyFixture(
-    id: AssetIdFixture('asset-chf'),
+    id: 'asset-chf',
     displayName: 'Swiss Franc',
     code: AssetCodeFixture('CHF'),
     decimalPlaces: 2,
@@ -20,7 +20,7 @@ const List<AssetFixture> assetsFixtures = [
     bundledLogoPath: 'PLACEHOLDER_PATH',
   ),
   CurrencyFixture(
-    id: AssetIdFixture('asset-usd'),
+    id: 'asset-usd',
     displayName: 'US Dollar',
     code: AssetCodeFixture('USD'),
     decimalPlaces: 2,
