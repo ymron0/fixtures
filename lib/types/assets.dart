@@ -5,7 +5,7 @@ class AssetCodeFixture {
 
 abstract class AssetFixture {
   final String id;
-  final String displayName;
+  final String name;
   final AssetCodeFixture code;
   final int decimalPlaces;
   final String symbol;
@@ -14,7 +14,7 @@ abstract class AssetFixture {
 
   const AssetFixture({
     required this.id,
-    required this.displayName,
+    required this.name,
     required this.code,
     required this.decimalPlaces,
     required this.symbol,
@@ -26,7 +26,7 @@ abstract class AssetFixture {
 class CurrencyFixture extends AssetFixture {
   const CurrencyFixture({
     required String id,
-    required String displayName,
+    required String name,
     required AssetCodeFixture code,
     required int decimalPlaces,
     required String symbol,
@@ -34,7 +34,7 @@ class CurrencyFixture extends AssetFixture {
     String? bundledLogoPath,
   }) : super(
          id: id,
-         displayName: displayName,
+         name: name,
          code: code,
          decimalPlaces: decimalPlaces,
          symbol: symbol,

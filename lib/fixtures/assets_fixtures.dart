@@ -3,7 +3,7 @@ import 'package:fixtures/types/assets.dart';
 const List<AssetFixture> assetsFixtures = [
   CurrencyFixture(
     id: 'asset-eur',
-    displayName: 'Euro',
+    name: 'Euro',
     code: AssetCodeFixture('EUR'),
     decimalPlaces: 2,
     symbol: '€',
@@ -12,7 +12,7 @@ const List<AssetFixture> assetsFixtures = [
   ),
   CurrencyFixture(
     id: 'asset-chf',
-    displayName: 'Swiss Franc',
+    name: 'Swiss Franc',
     code: AssetCodeFixture('CHF'),
     decimalPlaces: 2,
     symbol: 'Fr',
@@ -21,7 +21,7 @@ const List<AssetFixture> assetsFixtures = [
   ),
   CurrencyFixture(
     id: 'asset-usd',
-    displayName: 'US Dollar',
+    name: 'US Dollar',
     code: AssetCodeFixture('USD'),
     decimalPlaces: 2,
     symbol: r'$',
