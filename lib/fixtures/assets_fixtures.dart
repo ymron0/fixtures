@@ -7,7 +7,7 @@ const List<AssetFixture> assetsFixtures = [
     code: AssetCodeFixture('EUR'),
     decimalPlaces: 2,
     symbol: '€',
-    remoteLogoUrl: 'PLACEHOLDER_URL',
+    remoteLogoUrl: 'https://example.com/euro.png',
     bundledLogoAsset: 'PLACEHOLDER_PATH',
   ),
   CurrencyFixture(
@@ -16,7 +16,7 @@ const List<AssetFixture> assetsFixtures = [
     code: AssetCodeFixture('CHF'),
     decimalPlaces: 2,
     symbol: 'Fr',
-    remoteLogoUrl: 'PLACEHOLDER_URL',
+    remoteLogoUrl: 'https://example.com/swiss_franc.png',
     bundledLogoAsset: 'PLACEHOLDER_PATH',
   ),
   CurrencyFixture(
