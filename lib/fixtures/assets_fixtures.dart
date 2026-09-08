@@ -1,34 +1,31 @@
-const Map<String, dynamic> assetsFixtures = {
-  'assets': [
-    {
-      '_type': 'currency',
-      'id': {'value': 'asset-eur'},
-      'displayName': 'Euro',
-      'code': {'value': 'EUR'},
-      'symbol': '€',
-      'logoUrl': 'PLACEHOLDER_URL',
-      'bundledLogoPath': 'PLACEHOLDER_PATH',
-      'decimalPlaces': 2,
-    },
-    {
-      '_type': 'currency',
-      'id': {'value': 'asset-CHF'},
-      'displayName': 'Swiss Franc',
-      'code': {'value': 'CHF'},
-      'symbol': 'Fr',
-      'logoUrl': null,
-      'bundledLogoPath': null,
-      'decimalPlaces': 2,
-    },
-    {
-      '_type': 'currency',
-      'id': {'value': 'asset-usd'},
-      'displayName': 'US Dollar',
-      'code': {'value': 'USD'},
-      'symbol': '\$',
-      'logoUrl': null,
-      'bundledLogoPath': null,
-      'decimalPlaces': 2,
-    },
-  ],
-};
+import 'package:fixtures/types/assets.dart';
+
+const List<AssetFixture> assetsFixtures = [
+  CurrencyFixture(
+    id: AssetIdFixture('asset-eur'),
+    displayName: 'Euro',
+    code: AssetCodeFixture('EUR'),
+    decimalPlaces: 2,
+    symbol: '€',
+    logoUrl: 'PLACEHOLDER_URL',
+    bundledLogoPath: 'PLACEHOLDER_PATH',
+  ),
+  CurrencyFixture(
+    id: AssetIdFixture('asset-chf'),
+    displayName: 'Swiss Franc',
+    code: AssetCodeFixture('CHF'),
+    decimalPlaces: 2,
+    symbol: 'Fr',
+    logoUrl: 'PLACEHOLDER_URL',
+    bundledLogoPath: 'PLACEHOLDER_PATH',
+  ),
+  CurrencyFixture(
+    id: AssetIdFixture('asset-usd'),
+    displayName: 'US Dollar',
+    code: AssetCodeFixture('USD'),
+    decimalPlaces: 2,
+    symbol: r'$',
+    logoUrl: null,
+    bundledLogoPath: null,
+  ),
+];
