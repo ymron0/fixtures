@@ -8,7 +8,7 @@ abstract class AssetFixture {
   final String name;
   final AssetCodeFixture code;
   final int decimalPlaces;
-  final String symbol;
+  final String? symbol;
   final String? remoteLogoUrl;
   final String? bundledLogoAsset;
 
@@ -17,7 +17,7 @@ abstract class AssetFixture {
     required this.name,
     required this.code,
     required this.decimalPlaces,
-    required this.symbol,
+    this.symbol,
     this.remoteLogoUrl,
     this.bundledLogoAsset,
   });
@@ -29,7 +29,7 @@ class CurrencyFixture extends AssetFixture {
     required String name,
     required AssetCodeFixture code,
     required int decimalPlaces,
-    required String symbol,
+    String? symbol,
     String? remoteLogoUrl,
     String? bundledLogoAsset,
   }) : super(
