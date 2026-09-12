@@ -6,21 +6,36 @@ final List<TransactionFixture> transactionsFixtures = [
     kind: 'expense',
     merchantId: 'merchant-grocery-store',
     description: 'Weekly groceries',
+    note: 'Household and pantry items',
     state: 'actual',
     splits: const [
       TransactionSplitFixture(
         transactionAmount: AssetAmountFixture(
           assetId: 'asset-eur',
-          amount: '24.90',
+          amount: '15.00',
           direction: 'outgoing',
         ),
         valuationAmount: AssetAmountFixture(
-          assetId: 'asset-chf',
-          amount: '23.80',
+          assetId: 'asset-eur',
+          amount: '15.00',
           direction: 'outgoing',
         ),
         budgetId: 'budget-household',
         categoryId: 'category-groceries',
+      ),
+      TransactionSplitFixture(
+        transactionAmount: AssetAmountFixture(
+          assetId: 'asset-eur',
+          amount: '9.90',
+          direction: 'outgoing',
+        ),
+        valuationAmount: AssetAmountFixture(
+          assetId: 'asset-eur',
+          amount: '9.90',
+          direction: 'outgoing',
+        ),
+        categoryId: 'category-household',
+        jarId: 'jar-household',
       ),
     ],
     ledgerEntries: const [
@@ -37,11 +52,30 @@ final List<TransactionFixture> transactionsFixtures = [
           direction: 'outgoing',
         ),
         valuationAmount: AssetAmountFixture(
-          assetId: 'asset-chf',
-          amount: '23.80',
+          assetId: 'asset-eur',
+          amount: '24.90',
           direction: 'outgoing',
         ),
         role: 'primary',
+      ),
+      LedgerEntryFixture(
+        accountId: 'account-eur-checking',
+        transactionAmount: AssetAmountFixture(
+          assetId: 'asset-eur',
+          amount: '1.50',
+          direction: 'outgoing',
+        ),
+        accountAmount: AssetAmountFixture(
+          assetId: 'asset-eur',
+          amount: '1.50',
+          direction: 'outgoing',
+        ),
+        valuationAmount: AssetAmountFixture(
+          assetId: 'asset-eur',
+          amount: '1.50',
+          direction: 'outgoing',
+        ),
+        role: 'fee',
       ),
     ],
     entityVersion: 1,
@@ -62,8 +96,8 @@ final List<TransactionFixture> transactionsFixtures = [
           direction: 'incoming',
         ),
         valuationAmount: AssetAmountFixture(
-          assetId: 'asset-chf',
-          amount: '5000.00',
+          assetId: 'asset-eur',
+          amount: '5200.00',
           direction: 'incoming',
         ),
         categoryId: 'category-salary',
@@ -83,8 +117,8 @@ final List<TransactionFixture> transactionsFixtures = [
           direction: 'incoming',
         ),
         valuationAmount: AssetAmountFixture(
-          assetId: 'asset-chf',
-          amount: '5000.00',
+          assetId: 'asset-eur',
+          amount: '5200.00',
           direction: 'incoming',
         ),
         role: 'primary',
@@ -92,7 +126,7 @@ final List<TransactionFixture> transactionsFixtures = [
     ],
     entityVersion: 1,
     createdAt: DateTime.utc(2026, 9, 2, 7),
-    modifiedAt: DateTime.utc(2026, 9, 2, 7),
+    modifiedAt: DateTime.utc(2026, 9, 2, 8),
   ),
   TransactionFixture(
     id: 'transaction-transfer',
@@ -158,17 +192,17 @@ final List<TransactionFixture> transactionsFixtures = [
         transactionAmount: AssetAmountFixture(
           assetId: 'asset-chf',
           amount: '12.50',
-          direction: 'incoming',
+          direction: 'outgoing',
         ),
         accountAmount: AssetAmountFixture(
           assetId: 'asset-chf',
           amount: '12.50',
-          direction: 'incoming',
+          direction: 'outgoing',
         ),
         valuationAmount: AssetAmountFixture(
           assetId: 'asset-chf',
           amount: '12.50',
-          direction: 'incoming',
+          direction: 'outgoing',
         ),
         role: 'primary',
       ),
@@ -176,5 +210,38 @@ final List<TransactionFixture> transactionsFixtures = [
     entityVersion: 1,
     createdAt: DateTime.utc(2026, 9, 4, 16, 15),
     modifiedAt: DateTime.utc(2026, 9, 4, 16, 15),
+  ),
+  TransactionFixture(
+    id: 'transaction-unknown-balance',
+    kind: 'balanceCorrection',
+    merchantId: 'self',
+    description: null,
+    note: null,
+    state: 'planned',
+    splits: const [],
+    ledgerEntries: const [
+      LedgerEntryFixture(
+        accountId: 'account-eur-cash',
+        transactionAmount: AssetAmountFixture(
+          assetId: 'asset-eur',
+          amount: '-1',
+          direction: 'incoming',
+        ),
+        accountAmount: AssetAmountFixture(
+          assetId: 'asset-eur',
+          amount: '-1',
+          direction: 'incoming',
+        ),
+        valuationAmount: AssetAmountFixture(
+          assetId: 'asset-eur',
+          amount: '-1',
+          direction: 'incoming',
+        ),
+        role: 'primary',
+      ),
+    ],
+    entityVersion: 1,
+    createdAt: DateTime.utc(2026, 9, 5, 9),
+    modifiedAt: DateTime.utc(2026, 9, 5, 9),
   ),
 ];
