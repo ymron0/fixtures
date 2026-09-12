@@ -1,6 +1,6 @@
 import 'package:fixtures/types/assets.dart';
 
-const List<AssetFixture> assetsFixtures = [
+List<AssetFixture> assetsFixtures = [
   CurrencyFixture(
     id: 'asset-eur',
     name: 'Euro',

@@ -11,6 +11,9 @@ abstract class AssetFixture {
   final String? symbol;
   final String? remoteLogoUrl;
   final String? bundledLogoAsset;
+  final int entityVersion;
+  final DateTime createdAt;
+  final DateTime modifiedAt;
 
   const AssetFixture({
     required this.id,
@@ -20,11 +23,14 @@ abstract class AssetFixture {
     this.symbol,
     this.remoteLogoUrl,
     this.bundledLogoAsset,
+    required this.entityVersion,
+    required this.createdAt,
+    required this.modifiedAt,
   });
 }
 
 class CurrencyFixture extends AssetFixture {
-  const CurrencyFixture({
+  CurrencyFixture({
     required String id,
     required String name,
     required AssetCodeFixture code,
@@ -40,5 +46,8 @@ class CurrencyFixture extends AssetFixture {
          symbol: symbol,
          remoteLogoUrl: remoteLogoUrl,
          bundledLogoAsset: bundledLogoAsset,
+         entityVersion: 1,
+         createdAt: DateTime.now(),
+         modifiedAt: DateTime.now(),
        );
 }
