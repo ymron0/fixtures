@@ -47,6 +47,7 @@ class TransactionFixture {
     required this.id,
     required this.kind,
     required this.merchantId,
+    required this.effectiveAt,
     this.description,
     this.note,
     required this.state,
@@ -60,6 +61,7 @@ class TransactionFixture {
   final String id;
   final String kind;
   final String merchantId;
+  final DateTime effectiveAt;
   final String? description;
   final String? note;
   final String state;
