@@ -1,12 +1,16 @@
 class CategoryBudgetFixture {
   const CategoryBudgetFixture({
+    required this.assetId,
     required this.limit,
+    required this.direction,
     required this.period,
     required this.effectiveFrom,
     this.effectiveUntil,
   });
 
+  final String assetId;
   final String limit;
+  final String direction;
   final String period;
   final DateTime effectiveFrom;
   final DateTime? effectiveUntil;

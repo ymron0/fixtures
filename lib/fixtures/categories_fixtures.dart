@@ -7,7 +7,9 @@ final List<CategoryFixture> categoriesFixtures = [
     kind: 'expense',
     budgets: [
       CategoryBudgetFixture(
+        assetId: 'asset-chf',
         limit: '2500',
+        direction: 'outgoing',
         period: 'monthly',
         effectiveFrom: DateTime.utc(2026, 1, 1),
       ),
@@ -26,7 +28,9 @@ final List<CategoryFixture> categoriesFixtures = [
     kind: 'expense',
     budgets: [
       CategoryBudgetFixture(
+        assetId: 'asset-chf',
         limit: '700',
+        direction: 'outgoing',
         period: 'monthly',
         effectiveFrom: DateTime.utc(2026, 1, 1),
       ),
