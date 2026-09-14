@@ -27,7 +27,7 @@ final List<MerchantFixture> merchantsFixtures = [
     name: 'Archived Cafe',
     createdAt: DateTime.utc(2025, 5, 1, 7),
     modifiedAt: DateTime.utc(2026, 8, 1, 12),
-    deletedAt: DateTime.utc(2026, 8, 1, 12),
+    archivedAt: DateTime.utc(2026, 8, 1, 12),
     entityVersion: 1,
   ),
 ];

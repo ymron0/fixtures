@@ -28,6 +28,7 @@ class CategoryFixture {
     required this.sortOrder,
     required this.createdAt,
     required this.modifiedAt,
+    this.archivedAt,
     this.deletedAt,
     required this.entityVersion,
   });
@@ -42,6 +43,7 @@ class CategoryFixture {
   final int sortOrder;
   final DateTime createdAt;
   final DateTime modifiedAt;
+  final DateTime? archivedAt;
   final DateTime? deletedAt;
   final int entityVersion;
 }

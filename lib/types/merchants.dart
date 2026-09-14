@@ -4,6 +4,7 @@ class MerchantFixture {
     required this.name,
     required this.createdAt,
     required this.modifiedAt,
+    this.archivedAt,
     this.deletedAt,
     required this.entityVersion,
   });
@@ -12,6 +13,7 @@ class MerchantFixture {
   final String name;
   final DateTime createdAt;
   final DateTime modifiedAt;
+  final DateTime? archivedAt;
   final DateTime? deletedAt;
   final int entityVersion;
 }
