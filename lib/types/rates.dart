@@ -2,7 +2,7 @@ abstract class RateFixture {
   final String id;
   final String baseAssetId;
   final String quoteAssetId;
-  final double rate;
+  final String rate;
   final DateTime effectiveAt;
   final int entityVersion;
   final DateTime createdAt;
@@ -25,7 +25,29 @@ class ExchangeRateFixture extends RateFixture {
     required String id,
     required String baseAssetId,
     required String quoteAssetId,
-    required double rate,
+    required String rate,
+    required DateTime effectiveAt,
+    required int entityVersion,
+    required DateTime createdAt,
+    required DateTime modifiedAt,
+  }) : super(
+         id: id,
+         baseAssetId: baseAssetId,
+         quoteAssetId: quoteAssetId,
+         rate: rate,
+         effectiveAt: effectiveAt,
+         entityVersion: entityVersion,
+         createdAt: createdAt,
+         modifiedAt: modifiedAt,
+       );
+}
+
+class MarketPriceRateFixture extends RateFixture {
+  const MarketPriceRateFixture({
+    required String id,
+    required String baseAssetId,
+    required String quoteAssetId,
+    required String rate,
     required DateTime effectiveAt,
     required int entityVersion,
     required DateTime createdAt,

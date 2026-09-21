@@ -1,4 +1,5 @@
 import 'package:fixtures/types/assets.dart';
+import 'package:fixtures/types/entity_logo.dart';
 
 List<AssetFixture> assetsFixtures = [
   CurrencyFixture(
@@ -7,16 +8,20 @@ List<AssetFixture> assetsFixtures = [
     code: AssetCodeFixture('EUR'),
     decimalPlaces: 2,
     symbol: '€',
-    remoteLogoUrl: 'https://example.com/euro.png',
-    bundledLogoAsset: 'PLACEHOLDER_PATH',
+    logo: EntityLogoFixture(
+      source: 'remote',
+      value: 'https://example.com/euro.png',
+    ),
   ),
   CurrencyFixture(
     id: 'asset-chf',
     name: 'Swiss Franc',
     code: AssetCodeFixture('CHF'),
     decimalPlaces: 2,
-    remoteLogoUrl: 'https://example.com/swiss_franc.png',
-    bundledLogoAsset: 'PLACEHOLDER_PATH',
+    logo: EntityLogoFixture(
+      source: 'remote',
+      value: 'https://example.com/swiss_franc.png',
+    ),
   ),
   CurrencyFixture(
     id: 'asset-usd',
@@ -24,8 +29,6 @@ List<AssetFixture> assetsFixtures = [
     code: AssetCodeFixture('USD'),
     decimalPlaces: 2,
     symbol: r'$',
-    remoteLogoUrl: null,
-    bundledLogoAsset: null,
   ),
   CurrencyFixture(
     id: 'asset-uah',
@@ -33,8 +36,6 @@ List<AssetFixture> assetsFixtures = [
     code: AssetCodeFixture('UAH'),
     decimalPlaces: 2,
     symbol: '₴',
-    remoteLogoUrl: null,
-    bundledLogoAsset: null,
   ),
   CurrencyFixture(
     id: 'asset-pln',
@@ -42,7 +43,5 @@ List<AssetFixture> assetsFixtures = [
     code: AssetCodeFixture('PLN'),
     decimalPlaces: 2,
     symbol: 'zł',
-    remoteLogoUrl: null,
-    bundledLogoAsset: null,
   ),
 ];

@@ -1,3 +1,5 @@
+import 'package:fixtures/types/entity_logo.dart';
+
 class AssetCodeFixture {
   final String value;
   const AssetCodeFixture(this.value);
@@ -9,8 +11,7 @@ abstract class AssetFixture {
   final AssetCodeFixture code;
   final int decimalPlaces;
   final String? symbol;
-  final String? remoteLogoUrl;
-  final String? bundledLogoAsset;
+  final EntityLogoFixture? logo;
   final int entityVersion;
   final DateTime createdAt;
   final DateTime modifiedAt;
@@ -21,8 +22,7 @@ abstract class AssetFixture {
     required this.code,
     required this.decimalPlaces,
     this.symbol,
-    this.remoteLogoUrl,
-    this.bundledLogoAsset,
+    this.logo,
     required this.entityVersion,
     required this.createdAt,
     required this.modifiedAt,
@@ -36,16 +36,80 @@ class CurrencyFixture extends AssetFixture {
     required AssetCodeFixture code,
     required int decimalPlaces,
     String? symbol,
-    String? remoteLogoUrl,
-    String? bundledLogoAsset,
+    EntityLogoFixture? logo,
   }) : super(
          id: id,
          name: name,
          code: code,
          decimalPlaces: decimalPlaces,
          symbol: symbol,
-         remoteLogoUrl: remoteLogoUrl,
-         bundledLogoAsset: bundledLogoAsset,
+         logo: logo,
+         entityVersion: 1,
+         createdAt: DateTime.now(),
+         modifiedAt: DateTime.now(),
+       );
+}
+
+class CommodityAssetFixture extends AssetFixture {
+  CommodityAssetFixture({
+    required String id,
+    required String name,
+    required AssetCodeFixture code,
+    required int decimalPlaces,
+    String? symbol,
+    EntityLogoFixture? logo,
+  }) : super(
+         id: id,
+         name: name,
+         code: code,
+         decimalPlaces: decimalPlaces,
+         symbol: symbol,
+         logo: logo,
+         entityVersion: 1,
+         createdAt: DateTime.now(),
+         modifiedAt: DateTime.now(),
+       );
+}
+
+class CryptoAssetFixture extends AssetFixture {
+  CryptoAssetFixture({
+    required String id,
+    required String name,
+    required AssetCodeFixture code,
+    required int decimalPlaces,
+    this.paymentEnabled = false,
+    String? symbol,
+    EntityLogoFixture? logo,
+  }) : super(
+         id: id,
+         name: name,
+         code: code,
+         decimalPlaces: decimalPlaces,
+         symbol: symbol,
+         logo: logo,
+         entityVersion: 1,
+         createdAt: DateTime.now(),
+         modifiedAt: DateTime.now(),
+       );
+
+  final bool paymentEnabled;
+}
+
+class StockAssetFixture extends AssetFixture {
+  StockAssetFixture({
+    required String id,
+    required String name,
+    required AssetCodeFixture code,
+    required int decimalPlaces,
+    String? symbol,
+    EntityLogoFixture? logo,
+  }) : super(
+         id: id,
+         name: name,
+         code: code,
+         decimalPlaces: decimalPlaces,
+         symbol: symbol,
+         logo: logo,
          entityVersion: 1,
          createdAt: DateTime.now(),
          modifiedAt: DateTime.now(),
